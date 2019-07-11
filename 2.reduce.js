@@ -20,20 +20,56 @@ const calculateTotalPokemonWeight = (pokemons) => {
 //     return averageSpawnChance
 // }
 
-// clean it up!!!
+// // clean it up!!!
+// // delete comments and console.log
+// const calculateAverageSpawnChance = (pokemons) => {
+//     const totalSpawnChance = pokemons.reduce((accumulator, currentValue) => {
+//         return accumulator + currentValue.spawn_chance
+//     }, 0)
+//     // next two line in one line
+//     // const averageSpawnChance = totalSpawnChance / pokemons.length
+//     // return averageSpawnChance
+//     return totalSpawnChance / pokemons.length
+// }
+
+// clean it up ver 2!!!
 // delete comments and console.log
 const calculateAverageSpawnChance = (pokemons) => {
-    const totalSpawnChance = pokemons.reduce((accumulator, currentValue) => {
+    // get rid of totalSpawnChance and simply return the functions value
+    // const totalSpawnChance = pokemons.reduce((accumulator, currentValue) => {
+    //     return accumulator + currentValue.spawn_chance
+    // }, 0)
+    return pokemons.reduce((accumulator, currentValue) => {
         return accumulator + currentValue.spawn_chance
-    }, 0)
-    // next two line in one line
-    // const averageSpawnChance = totalSpawnChance / pokemons.length
-    // return averageSpawnChance
-    return totalSpawnChance / pokemons.length
+    }, 0) /pokemons.length
+    // move up /pokemons.length
+    // /pokemons.length
 }
+
+const calculateTotalEggDistance = (pokemons) => {
+    // do not forget to return the distances
+    const distances = pokemons.reduce((totalDistance, currentPokemon) => {
+        if (currentPokemon.egg === "Not in Eggs") {
+            return totalDistance
+        }
+        return totalDistance + parseInt(currentPokemon.egg)
+    }, 0)
+    // do not forget to return the distances
+    return distances
+}
+
+// clean it up » distances removed
+// const calculateTotalEggDistance = (pokemons) => {
+//     return pokemons.reduce((totalDistance, currentPokemon) => {
+//         if (currentPokemon.egg === "Not in Eggs") {
+//             return totalDistance
+//         }
+//         return totalDistance + parseInt(currentPokemon.egg)
+//     }, 0)
+// }
 
 module.exports = {
     calculateTotalPokemonWeight,
-    calculateAverageSpawnChance
-    // calculateTotalEggDistance
+    calculateAverageSpawnChance,
+    calculateTotalEggDistance
 }

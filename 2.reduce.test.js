@@ -17,7 +17,7 @@ test.only('calculateAverageSpawnChance: calculates the average spawn_chance of a
     expect(averageSpawnChance).toBeCloseTo(0.73, 2)
 })
 
-test('calculateTotalEggDistance: calculates how for you have to walk to hatch one of each pokemon egg', () => {
+test.only('calculateTotalEggDistance: calculates how for you have to walk to hatch one of each pokemon egg', () => {
     const totalEggDistance = calculateTotalEggDistance(pokemons)
     expect(totalEggDistance).toBe(408)
 })
