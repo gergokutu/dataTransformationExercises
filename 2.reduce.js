@@ -52,7 +52,7 @@ const calculateTotalEggDistance = (pokemons) => {
         if (currentPokemon.egg === "Not in Eggs") {
             return totalDistance
         }
-        return totalDistance + parseInt(currentPokemon.egg)
+        return totalDistance + parseFloat(currentPokemon.egg)
     }, 0)
     // do not forget to return the distances
     return distances
@@ -68,8 +68,29 @@ const calculateTotalEggDistance = (pokemons) => {
 //     }, 0)
 // }
 
+// const getHeaviestPokemon = (pokemons) => {
+//     const heavyPokemon = pokemons.reduce((heaviestPokemon, currentPokemon) => {
+//         if (parseFloat(heaviestPokemon.weight) < parseFloat(currentPokemon.weight)) {
+//             return currentPokemon
+//         }
+//         return heaviestPokemon
+//     })
+//     return heavyPokemon
+// }
+
+// clean it up!
+const getHeaviestPokemon = (pokemons) => {
+    return pokemons.reduce((heaviestPokemon, currentPokemon) => {
+        if (parseFloat(heaviestPokemon.weight) < parseFloat(currentPokemon.weight)) {
+            return currentPokemon
+        }
+        return heaviestPokemon
+    })
+}
+
 module.exports = {
     calculateTotalPokemonWeight,
     calculateAverageSpawnChance,
-    calculateTotalEggDistance
+    calculateTotalEggDistance,
+    getHeaviestPokemon
 }

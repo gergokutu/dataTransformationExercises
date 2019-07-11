@@ -4,7 +4,7 @@ const getPokeNames = (pokemons) => {
 
 const getPokemonById = (pokemons, id) => {
 
-    // FIRST STEP
+    // STEP FIRST
     // check things:
     // 1. is this function getting called
     // console.log('hi')
@@ -15,7 +15,7 @@ const getPokemonById = (pokemons, id) => {
     // STEP TWO
     // choose your approach
     // we have [{}, {}, {}]
-    // we use find
+    // we use .find
 
     // STEP THREE
     // write a iterator function that console logs your pokemons one by one
@@ -39,7 +39,7 @@ const getPokemonById = (pokemons, id) => {
 
     // REFACTOR
 
-    // STEP FIVE
+    // STEP SIX
     // clean up (now just comment out)
     // CHECK YOURSELF 
 
