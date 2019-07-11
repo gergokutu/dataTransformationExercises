@@ -83,6 +83,10 @@ const getRarePokemons = (pokemons) => {
     return pokemons.filter(rarepokemon => rarepokemon.spawn_chance < 0.1)
 }
 
+// pokemon.weight.slice(' ')[0] » takes the number as a string e.g. '38'
+// the [1] is the 'kg'...
+// it should be still parsed to a number...
+// parseFloat(pokemon.weight) does it in one step...
 const getMidSizedPokemon = pokemons => pokemons.find(pokemon => parseFloat(pokemon.weight) === 38)
 // 7. extra: apply simplier arrow function synthax
 // 6.a extra: if you apply pokemon.weight === '38.0 kg' insted of
