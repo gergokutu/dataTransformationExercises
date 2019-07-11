@@ -12,7 +12,7 @@ test('calculateTotalPokemonWeight: calculates the combined weight of all 151 pok
     expect(totalweight).toBe(6938.7)
 });
 
-test('calculateAverageSpawnChance: calculates the average spawn_chance of a pokemon', () => {
+test.only('calculateAverageSpawnChance: calculates the average spawn_chance of a pokemon', () => {
     const averageSpawnChance = calculateAverageSpawnChance(pokemons)
     expect(averageSpawnChance).toBeCloseTo(0.73, 2)
 })
